@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flash card</title>
+    <!-- Link CSS , Font -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link icon -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Link css for flash card -->
+    <link rel="stylesheet" href="css/flash-style.css">
+
+
+</head>
+
+<body>
+
+    <!-- navBars for mainpage -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="index.html">
+                &emsp;ภาษาญี่ปุ่นขั้นพื้นฐาน
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="charecter.html">ตัวอักษร<span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="word.html">คำศัพท์</a>
+                    <a class="nav-item nav-link" href="lesson.html">ไวยกรณ์</a>
+                    <a class="nav-item nav-link" href="flash-card.html">ทบทวน</a>
+                </div>
+            </div>
+        </nav>
+    </header> <!-- end-navbar -->
+
+    <!-- Heading Section -->
+
+    <div class="jumbotron text-center img-flash ">
+        <div class="overlay"></div>
+
+        <div class="inner">
+            <h1 class="jumbotron-heading">Flash card</h1>
+            <p class="description-heading">หลังจากเรียนรู้คำศัพท์กันมาแล้ว เราลองมาทบทวนคำศัพท์ทั้งหมดด้วย Flash Card กันเถอะ !
+            </p>
+
+        </div>
+    </div>
+    <!-- Flash card section-->
+
+
+    <div class="container">
+        <button type="button" class="btn btn-primary" onclick="request('number')">ตัวเลข</button>
+        <button type="button" class="btn btn-primary" onclick="request('time')">เวลา</button>
+        <button type="button" class="btn btn-primary" onclick="request('direction')">ทิศทาง</button>
+        <button type="button" class="btn btn-primary" onclick="request('place')">สถานที่</button>
+        <button type="button" class="btn btn-primary" onclick="request('transportation')">การคมนาคม</button>
+        <button type="button" class="btn btn-primary" onclick="request('food')">อาหาร</button>
+        <button type="button" class="btn btn-primary" onclick="request('fruit')">ผลไม้</button>
+        <button type="button" class="btn btn-primary" onclick="request('costume')">เครื่องแต่งกาย</button>
+        <button type="button" class="btn btn-primary" onclick="request('number')">ตัวเลข</button>
+        <button type="button" class="btn btn-primary" onclick="request('time')">เวลา</button>
+        <button type="button" class="btn btn-primary" onclick="request('direction')">ทิศทาง</button>
+        <button type="button" class="btn btn-primary" onclick="request('place')">สถานที่</button>
+        <button type="button" class="btn btn-primary" onclick="request('transportation')">การคมนาคม</button>
+        <button type="button" class="btn btn-primary" onclick="request('food')">อาหาร</button>
+        <button type="button" class="btn btn-primary" onclick="request('fruit')">ผลไม้</button>
+        <button type="button" class="btn btn-primary" onclick="request('costume')">เครื่องแต่งกาย</button>
+        <button type="button" class="btn btn-primary" onclick="request('color')">สี</button>
+        <button type="button" class="btn btn-primary" onclick="request('family')">ครอบครัว</button>
+        <button type="button" class="btn btn-primary" onclick="request('home')">ของใช้ในบ้าน</button>
+        <button type="button" class="btn btn-primary" onclick="request('school')">การศึกษา</button>
+        <button type="button" class="btn btn-primary" onclick="request('job')">อาชีพ</button>
+        <button type="button" class="btn btn-primary" onclick="request('animal')">สัตว์</button>
+        <button type="button" class="btn btn-primary" onclick="request('action')">กิริยา</button>
+
+        <!-- <div class="row but-center">
+            <div class="col-md-8">
+                <button type="button" class="btn btn-primary" onclick="request('number')">ตัวเลข</button>
+                <button type="button" class="btn btn-primary" onclick="request('time')">เวลา</button>
+                <button type="button" class="btn btn-primary" onclick="request('direction')">ทิศทาง</button>
+                <button type="button" class="btn btn-primary" onclick="request('place')">สถานที่</button>
+                <button type="button" class="btn btn-primary" onclick="request('transportation')">การคมนาคม</button>
+                <button type="button" class="btn btn-primary" onclick="request('food')">อาหาร</button>
+                <button type="button" class="btn btn-primary" onclick="request('fruit')">ผลไม้</button>
+                <button type="button" class="btn btn-primary" onclick="request('costume')">เครื่องแต่งกาย</button>
+
+
+            </div>
+        </div>
+        <div class="row but-center">
+            <div class="col-md-7">
+                
+                
+                <button type="button" class="btn btn-primary" onclick="request('color')">สี</button>
+                <button type="button" class="btn btn-primary" onclick="request('family')">ครอบครัว</button>
+                <button type="button" class="btn btn-primary" onclick="request('home')">ของใช้ในบ้าน</button>
+                <button type="button" class="btn btn-primary" onclick="request('school')">การศึกษา</button>
+                <button type="button" class="btn btn-primary" onclick="request('job')">อาชีพ</button>
+                <button type="button" class="btn btn-primary" onclick="request('animal')">สัตว์</button>
+                <button type="button" class="btn btn-primary" onclick="request('action')">กิริยา</button>
+
+
+            </div> -->
+    </div>
+
+
+    </div>
+    <div class="flip-card-container">
+        <div class="flip-card ">
+            <div class="flip-card-front ">
+                <h3 id="text-front">โปรดเลือกหมวด</h3>
+            </div>
+            <div class="flip-card-back">
+                <h3 id="text-back">
+                    <span id="word">โปรดเลือกหมวด</span> <br>
+                    <span id="sound"></span> <br>
+                    <span id="kanji"></span> <br>
+                    <span id="meaning"></span> <br>
+                </h3>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="wrap">
+            <button type="button" class="btn btn-primary btn-lg btn-next" onclick="next()">ถัดไป</button>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+    <!-- Footer -->
+
+
+
+    <!-- Jquery Bootstrap-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Js Script Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Icon -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Js Scolling Nav -->
+    <script src="js/scolling.js"></script>
+    <!-- JS for flip flash card -->
+    <script src="js/flip.js"></script>
+    <!-- JS for show word on flash card -->
+    <script src="js/random.js"></script>
+
+</body>
+
+</html7
